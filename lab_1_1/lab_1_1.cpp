@@ -16,17 +16,17 @@ int main()
 
     if (a != 0) {
         double delta = b * b - 4 * a * c;
+        double dzielnik = 2 * a;
         if (delta > 0) {
             double sqrt_delta = sqrt(delta);
-            
             double x1, x2;
-            x1 = (-b - sqrt_delta) / (2 * a);
-            x2 = (-b + sqrt_delta) / (2 * a);
+            x1 = (-b - sqrt_delta) / dzielnik;
+            x2 = (-b + sqrt_delta) / dzielnik;
 
             cout << "Dwa rozwi¹zania (a=/=0, delta > 0): x1 = " << x1 << ", x2 = " << x2;
         }
         else if (delta == 0) {
-            double x = -b / (2 * a);
+            double x = -b / dzielnik;
             cout << "Jedno rozwi¹zanie (a=/=0, delta = 0): x1 = x2 = " << x << endl;
         }
         else {
